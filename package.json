@@ -1,0 +1,23 @@
+{
+  "name": "i2-made-a-blockchain",
+  "version": "0.1.0",
+  "description": "I too made a blockchain in javascript",
+  "main": "blockchain.js",
+  "scripts": {
+    "test": "nyc mocha *.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdreid/i2-made-a-blockchain-js.git"
+  },
+  "author": "Trevor Reid <trevor.d.reid@gmail.com> (http://tdreid.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tdreid/i2-made-a-blockchain-js/issues"
+  },
+  "homepage": "https://github.com/tdreid/i2-made-a-blockchain-js#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
