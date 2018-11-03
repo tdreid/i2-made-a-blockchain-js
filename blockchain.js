@@ -19,7 +19,7 @@ class Blockchain {
   }
 
   addBlock(block) {
-    block.predecessorHash = this.getLastBlock().getHash();
+    block.predecessorHash = this.getLastBlock().hash;
     block.hash = block.getHash();
     this.chain.push(block);
   }
