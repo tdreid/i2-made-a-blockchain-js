@@ -1,4 +1,4 @@
-const hasher = require('crypto-js/256');
+const hasher = require('crypto-js/sha256');
 
 class Block {
   constructor(index, timestamp, payload, predecessorHash = '') {
