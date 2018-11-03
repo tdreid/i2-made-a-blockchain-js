@@ -7,6 +7,7 @@ class Block {
     this.payload = payload;
     this.predecessorHash = predecessorHash;
     this.hash = this.getHash();
+    this.nonce = 0;
   }
 
   getHash() {
