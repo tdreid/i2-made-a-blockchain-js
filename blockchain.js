@@ -4,8 +4,7 @@ class Blockchain
 {
     constructor()
     {
-        this.chain = [];
-        this.initialize();
+        this.chain = [this.initialize()];
     }
     
     initialize()
