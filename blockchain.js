@@ -28,11 +28,6 @@ class Blockchain {
     for (let i = 1; i < this.chain.length; i++) {
       const blockToCheck = this.chain[i];
       const predecessorBlock = this.chain[i - 1];
-      console.log(
-        i,
-        blockToCheck.hash !== blockToCheck.getHash(),
-        blockToCheck.hash !== predecessorBlock.hash
-      );
       if (
         blockToCheck.hash !== blockToCheck.getHash() ||
         blockToCheck.predecessorHash !== predecessorBlock.hash
