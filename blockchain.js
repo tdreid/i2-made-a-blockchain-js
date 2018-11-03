@@ -1,8 +1,9 @@
 const Block = require('./block.js');
 
 class Blockchain {
-  constructor() {
+  constructor(difficulty = 3) {
     this.chain = [this.initialize()];
+    this.difficulty = difficulty;
   }
 
   initialize() {
