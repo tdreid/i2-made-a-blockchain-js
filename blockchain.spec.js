@@ -1,6 +1,6 @@
 const assert = require('assert');
-const Block = require('./block.js');
 const moment = require('moment');
+const Block = require('./block.js');
 const Blockchain = require('./blockchain.js');
 
 let testchain = null;
@@ -44,12 +44,14 @@ describe('The Blockchain', function() {
     testchain.chain[2].payload = 'I messed with your data. Muhahahahaha!';
     assert(!testchain.isValid());
   });
-  it('varies the number of leading zeros required according to difficulty',  function() {
+  it('varies the number of leading zeros required according to difficulty', function() {
     this.timeout(5000);
     testchain.difficulty = 4;
-    testchain.addBlock(new Block(6, moment.utc().format('YYYY-MM-DD HH:mm:ss.SSSS'), {
+    testchain.addBlock(
+      new Block(6, moment.utc().format('YYYY-MM-DD HH:mm:ss.SSSS'), {
         content: 'This was a more difficult block to push'
-      }));
-    assert(testchain.getLastBlock().hash.startsWith('0000'));  
-  }); 
+      })
+    );
+    assert(testchain.getLastBlock().hash.startsWith('0000'));
+  });
 });
