@@ -12,7 +12,7 @@ class Block {
 
   getHash() {
     return hasher(
-      this.index + this.timestamp + JSON.stringify(this.payload)
+      this.index + this.timestamp + JSON.stringify(this.payload) + this.nonce
     ).toString();
   }
 }
