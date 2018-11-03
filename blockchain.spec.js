@@ -44,4 +44,12 @@ describe('The Blockchain', function() {
     testchain.chain[2].payload = 'I messed with your data. Muhahahahaha!';
     assert(!testchain.isValid());
   });
+  it('varies the number of leading zeros required according to difficulty',  function() {
+    this.timeout(5000);
+    testchain.difficulty = 4;
+    testchain.addBlock(new Block(6, moment.utc().format('YYYY-MM-DD HH:mm:ss.SSSS'), {
+        content: 'This was a more difficult block to push'
+      }));
+    assert(testchain.getLastBlock().hash.startsWith('0000'));  
+  }); 
 });
